@@ -18,14 +18,14 @@ public struct NefertitiFile: NefertitiFileProtocol {
     
     // MARK: - Initializers
     
-    init(title: String,
-         documentData: Data? = nil,
-         thumbnailData: Data? = nil,
-         createdDate: Date,
-         modifiedDate: Date,
-         openedDate: Date? = nil,
-         importedDate: Date? = nil,
-         fileType: NefertitiFileType = .pdfDocument) {
+    public init(title: String,
+                documentData: Data? = nil,
+                thumbnailData: Data? = nil,
+                createdDate: Date,
+                modifiedDate: Date,
+                openedDate: Date? = nil,
+                importedDate: Date? = nil,
+                fileType: NefertitiFileType = .pdfDocument) {
         self.title = title
         self.createdDate = createdDate
         self.modifiedDate = modifiedDate
