@@ -95,7 +95,7 @@ public struct NefertitiFile: NefertitiFileProtocol {
     
     public var createdDate: Date
     public var modifiedDate: Date
-    var openedDate: Date?
+    public var openedDate: Date?
     var importedDate: Date?
     public var fileType: NefertitiFileType
     
@@ -115,7 +115,7 @@ public struct NefertitiFile: NefertitiFileProtocol {
         return "\(modifiedDateInfo()) • \(documentDataSizeInfo())"
     }
     
-    mutating func rename(to newName: String) {
+    public mutating func rename(to newName: String) {
         if newName == title {
             return
         }
