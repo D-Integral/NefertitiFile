@@ -43,11 +43,11 @@ public struct NefertitiFile: NefertitiFileProtocol {
     
     // MARK: - Public Properties
     
-    var id = UUID()
+    public var id = UUID()
     
-    var title: String
+    public var title: String
     
-    var documentData: Data? {
+    public var documentData: Data? {
         get {
             guard let url = documentDataUrl else { return nil }
             
@@ -66,11 +66,11 @@ public struct NefertitiFile: NefertitiFileProtocol {
         }
     }
     
-    var documentDataUrl: URL? {
+    public var documentDataUrl: URL? {
         return documentDataUrl(for: title)?.appendingPathExtension("pdf")
     }
     
-    var thumbnailData: Data? {
+    public var thumbnailData: Data? {
         get {
             guard let url = thumbnailDataUrl else { return nil }
             
@@ -89,15 +89,15 @@ public struct NefertitiFile: NefertitiFileProtocol {
         }
     }
     
-    var thumbnailDataUrl: URL? {
+    public var thumbnailDataUrl: URL? {
         return thumbnailDataUrl(for: title)
     }
     
-    var createdDate: Date
-    var modifiedDate: Date
+    public var createdDate: Date
+    public var modifiedDate: Date
     var openedDate: Date?
     var importedDate: Date?
-    var fileType: NefertitiFileType
+    public var fileType: NefertitiFileType
     
     // MARK: - Public Methods
     
@@ -111,7 +111,7 @@ public struct NefertitiFile: NefertitiFileProtocol {
         }
     }
     
-    func info() -> String? {
+    public func info() -> String? {
         return "\(modifiedDateInfo()) • \(documentDataSizeInfo())"
     }
     
@@ -139,17 +139,17 @@ public struct NefertitiFile: NefertitiFileProtocol {
     
     // MARK: - Hashable
     
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
     
-    static func == (lhs: NefertitiFile, rhs: NefertitiFile) -> Bool {
+    public static func == (lhs: NefertitiFile, rhs: NefertitiFile) -> Bool {
         (lhs.id == rhs.id) && (lhs.title == rhs.title)
     }
     
     // MARK: - Comparable
     
-    static func < (lhs: NefertitiFile, rhs: NefertitiFile) -> Bool {
+    public static func < (lhs: NefertitiFile, rhs: NefertitiFile) -> Bool {
         return lhs.comparableDate() < rhs.comparableDate()
     }
     
