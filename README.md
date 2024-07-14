@@ -1,5 +1,5 @@
 # NefertitiFile
-NefertitiFile by Dmytro Skorokhod is an open source file format library used by <A HREF=https://github.com/D-Integral/Nefertiti>Nefertiti</A>, an open source library for making searchable PDFs from photos.
+NefertitiFile by <A HREF=https://www.linkedin.com/in/dmytro-skorokhod-b480b845/>Dmytro Skorokhod</A> is an open source file format library used by <A HREF=https://github.com/D-Integral/Nefertiti>Nefertiti</A>, an open source library for making searchable PDFs from photos.
 
 Here is an example of NefertitiFileProtocol usage:
 ```Swift
